@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanabala Vari Pelli Pelupu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Lakki+Reddy&family=Gidugu&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #fff5e6;
+            font-family: 'Georgia', serif;
+            overflow: hidden;
+            position: relative;
+        }
+        .video-container, .invitation-text, #introAnimation, #mainContent {
+            display: none;
+        }
+        .welcome-video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .invitation-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            font-weight: bold;
+            color: #a52a2a;
+        }
+        .intro-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            height: 100vh;
+            background-color: #fff5e6;
+        }
+        .elephant {
+            width: 200px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .left-elephant {
+            left: -250px;
+            animation: leftElephant 1.5s forwards;
+        }
+        .right-elephant {
+            right: -250px;
+            animation: rightElephant 1.5s forwards;
+        }
+        @keyframes leftElephant {
+            to { left: 50px; }
+        }
+        @keyframes rightElephant {
+            to { right: 50px; }
+        }
+        .intro-text {
+            font-size: 50px;
+            font-weight: bold;
+            color: #a52a2a;
+            opacity: 0;
+            animation: fadeIn 2s 1.5s forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        .map-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .image-container {
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #a52a2a;
+        }
+
+        .welcome-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: #a52a2a;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Music -->
+    
+    <!-- Welcome Video -->
+    <video class="welcome-video" autoplay playsinline muted>
+        <source src="welcome_video.mp4" type="video/mp4">
+    </video>
+
+    <!-- Elephant Animation Intro -->
+    <div id="introAnimation" class="intro-container">
+        <div class="elephant left-elephant">
+            <img src="elephant_right.png" alt="Left Elephant">
+        </div>
+        <div class="elephant right-elephant">
+            <img src="elephant_left.png" alt="Right Elephant">
+        </div>
+        <div class="intro-text">నానబాల వారి పెండ్లి పిలుపు</div>
+    </div>
+
+    <!-- Wedding Invitation -->
+    <div id="mainContent" class="main-content">
+        <div class="container">
+            <div class="header">
+                <h1 class="title">💍శుభ వివాహం 💐</h1>
+                <p class="subtitle">Wedding Invitation</p>
+                <div class="divider"></div>
+            </div>
+
+            <div class="couple-images">
+                <div class="groom-image">
+                    <img src="k1.png" alt="Groom" />
+                    <p class="image-caption">శివ ప్రసాద్</p>
+                </div>
+                <div class="couple-names">
+                    <h2>శివ ప్రసాద్ ♥ నందిని</h2>
+                    <h2>Shiva Prasad & Nandhini</h2>
+                </div>
+                <div class="bride-image">
+                    <img src="p1.png" alt="Bride" />
+                    <p class="image-caption">నందిని</p>
+                </div>
+            </div>
+
+            <div class="main-image">
+                <img width="1000" src="com.png" alt="">
+            </div>
+            <div class="message">మీకు మా పెళ్లికి హృదయపూర్వక ఆహ్వానం! 💖</div>
+
+            <div class="video-section">
+                <video controls>
+                    <source src="main.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="wedding-details">
+                <h3>Wedding Ceremony</h3>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <h4>📅 Date & Time</h4>
+                        <p>Sunday, FEB 23th, 2024</p>
+                        <p>⏰ Muhurtham: 7:15 AM to 8:15 AM</p>
+                    </div>
+                    <div class="detail-item">
+                        <h4>📍 Venue</h4>
+                        <p>Ellayapalli Ramalayam</p>
+                        <p>Obulvarripali, Kadapa</p>
+                    </div>
+                    <div class="detail-item">
+                        <h4>Contact</h4>
+                        <p>Chandu</p>
+                        <a href="tel:+917093047409">7093047409</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <div class="image-container">
+                    <img src="venue.jpeg" alt="Wedding Image">
+                    <p class="welcome-text">"Let's make beautiful memories together! You’re all invited to my daughter's wedding! 💖🎶</p>
+                </div>
+                <p class="welcome-text">Route map</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22963.22972278332!2d79.29664227642161!3d14.061225102435055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb32a1086ce5065%3A0xc98a69455517d074!2sEllayapalli%2C%20Pedda%20Orampadu%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1739045504851!5m2!1sen!2sin" 
+                    width="600" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const welcomeVideo = document.querySelector(".welcome-video");
+            const introAnimation = document.getElementById("introAnimation");
+            const mainContent = document.getElementById("mainContent");
+            const backgroundMusic = document.getElementById("background-music");
+
+            function playAudio() {
+                backgroundMusic.volume = 1;
+                backgroundMusic.play().catch(error => {
+                    console.log("Autoplay blocked. Waiting for user interaction.");
+                });
+            }
+
+            document.addEventListener("click", function () {
+                playAudio();
+            }, { once: true });
+
+            welcomeVideo.onended = function () {
+                welcomeVideo.style.display = "none";
+                introAnimation.style.display = "flex";
+
+                setTimeout(() => {
+                    introAnimation.style.display = "none";
+                    mainContent.style.display = "block";
+                    document.body.style.overflow = "auto";
+                }, 3000);
+            };
+
+            // Ensure full screen display on refresh
+            window.onload = function () {
+                setTimeout(() => {
+                    window.scrollTo(0, 0);
+                }, 100);
+            };
+        });
+    </script>
+
+</body>
+</html>
